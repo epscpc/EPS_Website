@@ -174,3 +174,20 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+// add .html if not cloudflare pages
+document.addEventListener('DOMContentLoaded', async () => {
+    const response = await fetch("/is-this-cloudflare");
+    if (!response.ok) {
+        // not cloudflare
+        for (const elem of document.querySelectorAll('.NavItem a')) {
+            const page = elem.getAttribute('data-page')
+            if (page) {
+                elem.href = `/${elem.getAttribute('data-page')}.html`;
+            } else {
+                // must be home page
+                elem.href = '/index.html';
+            }
+        }
+    }
+});
