@@ -1,0 +1,58 @@
+/* from elSSGin without dark mode stuff */
+
+/* orca-news/base.css */
+
+main {
+  /*font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;*/
+  line-height: 1.65;
+  padding: 1% 1%;
+}
+
+footer {
+  color: #535353;
+  font-size: .9em;
+}
+
+/* orca-news/messages.css */
+
+main a:link {
+  color: black;
+  .msg-more {
+    text-decoration-line: underline;
+    color: #372FDB;
+  }
+
+  text-decoration-line: none;
+}
+
+main a:visited {
+  color: black;
+
+  .msg-more {
+    color: #5D13C3;
+  }
+}
+
+#some-messages-unavailable a {
+  text-decoration-line: underline;
+  color: #372FDB;
+}
+
+/* page-specific */
+.date {
+  color: #535353;
+  font-size: .9em;
+}
+
+article img {
+  width: auto;
+  height: auto;
+  max-height: 110px;
+  float: right;
+  padding-left: 8px;
+  padding-bottom: 8px;
+}
+
+hr {
+  clear: both;
+}
