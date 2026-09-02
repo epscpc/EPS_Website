@@ -1,4 +1,5 @@
-# Disable caching for all pages (was requested)
 /*
-    # This header is more efficient than no-store
     Cache-Control: no-cache
+    # HSTS
+    # ideally, this should be set as a CF rule for the entire domain
+    Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
