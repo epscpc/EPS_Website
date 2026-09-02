@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
             </button>
             <div class="NavItem">
                 <li><a data-page="" href="/" class="top-level">Home</a></li><!-- data-page is empty string for home -->
+                <li><a data-page="news" href="/news" class="top-level">News</a></li>
                 <li><a data-page="cal" href="/cal" class="top-level">Calendar</a></li>
                 <li class="dropdown">
                     <button class="dropbtn1 top-level">Departments</button>
