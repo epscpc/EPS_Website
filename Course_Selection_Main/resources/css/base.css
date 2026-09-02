@@ -169,8 +169,7 @@ a:has(img#ElginParkOrcaImage) { /* Logo link */
 }
 
 .NavItem a.top-level {
-    /*sigh*//* Why is this necessary? */
-    height: calc(68px - 1px);
+    height: calc(100% - 3px);
 }
 
 .NavItem .top-level:hover {
