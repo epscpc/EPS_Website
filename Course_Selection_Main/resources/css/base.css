@@ -168,6 +168,10 @@ a:has(img#ElginParkOrcaImage) { /* Logo link */
     font-family: var(--font-family);
 }
 
+.NavItem a.top-level {
+    height: calc(100% - 3px);
+}
+
 .NavItem .top-level:hover {
     color: var(--nav-link-hover-color);
     border-bottom-color: var(--nav-link-hover-color);
