@@ -170,6 +170,11 @@ a:has(img#ElginParkOrcaImage) { /* Logo link */
 
 .NavItem a.top-level {
     height: calc(100% - 3px);
+    cursor: pointer;
+}
+
+.NavItem button.top-level {
+    cursor: default;
 }
 
 .NavItem .top-level:hover {
