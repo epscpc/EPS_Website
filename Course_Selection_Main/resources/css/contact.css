@@ -10,10 +10,9 @@ Contact section school colour: #5e3356
 
 #sectionerWhite,
 #sectionerAlt {
-    min-height: 100vh;
     height: auto;
     padding-top: 1%;
-    padding-bottom: 1%;
+    padding-bottom: 4%;
 }
 
 #sectionerWhite {
