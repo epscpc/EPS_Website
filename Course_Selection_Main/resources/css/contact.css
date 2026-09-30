@@ -64,6 +64,11 @@ address {
     font-size: 1.1em;
 }
 
+#counsellors-table-container {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
 #counsellorsTable {
     max-width: 1000px;
     margin: 0 auto;
