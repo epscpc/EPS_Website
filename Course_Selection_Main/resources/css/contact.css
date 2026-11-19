@@ -231,3 +231,101 @@ hr {
     background-color: #6b2796;
     margin: 10px 0;
 }
+
+
+/* Mobile counsellors table
+ * Each row becomes a card with labelled fields 
+ */
+@media (max-width: 800px) {
+    #counsellors-table-container {
+        overflow: visible;
+    }
+
+    #counsellorsTable table {
+        display: block;
+        margin-bottom: 20px;
+        border: 0;
+    }
+
+    #counsellorsTable caption {
+        display: block;
+        text-align: center;
+    }
+
+    #counsellorsTable thead {
+        display: none;
+    }
+
+    #counsellorsTable tbody {
+        display: grid;
+        gap: 14px;
+    }
+
+    #counsellorsTable tr,
+    #counsellorsTable tr:nth-child(even),
+    #counsellorsTable tr:hover {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 18px;
+        border: 1px solid #ccd5dd;
+        border-radius: 12px;
+        background-color: #fff;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    #counsellorsTable td {
+        display: grid;
+        grid-template-columns: 110px minmax(0, 1fr);
+        gap: 12px;
+        width: auto;
+        padding: 10px 0;
+        border: 0;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+        font-size: 16px;
+        font-weight: normal;
+        overflow-wrap: anywhere;
+    }
+
+    #counsellorsTable td:first-child {
+        padding-top: 0;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    #counsellorsTable td:last-child {
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+
+    #counsellorsTable td::before {
+        content: attr(data-label);
+        color: #6b2796;
+        font-size: 12px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: .04em;
+    }
+
+    #counsellorsTable .book-link {
+        justify-self: start;
+        padding: 8px 14px;
+        border-radius: 8px;
+        background-color: #6b2796;
+        color: #fff;
+        font-weight: bold;
+        overflow-wrap: normal;
+    }
+
+    #counsellorsTable .book-link:hover {
+        text-decoration: none;
+        background-color: #5a2080;
+    }
+}
+
+@media (max-width: 520px) {
+    #counsellorsTable td {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+}
