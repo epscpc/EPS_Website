@@ -176,18 +176,27 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // add .html if not cloudflare pages
+function addHtmlExtensions() {
+   // not cloudflare
+   for (const elem of document.querySelectorAll('.NavItem a')) {
+       const page = elem.getAttribute('data-page')
+       if (page) {
+           elem.href = `/${elem.getAttribute('data-page')}.html`;
+       } else {
+           // must be home page
+           elem.href = '/index.html';
+       }
+    }
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
-    const response = await fetch("/is-this-cloudflare");
-    if (!response.ok) {
-        // not cloudflare
-        for (const elem of document.querySelectorAll('.NavItem a')) {
-            const page = elem.getAttribute('data-page')
-            if (page) {
-                elem.href = `/${elem.getAttribute('data-page')}.html`;
-            } else {
-                // must be home page
-                elem.href = '/index.html';
-            }
+    try {
+        const response = await fetch("/cf-detect");
+        if (!response.headers.has('Server-Like-CFPages')) {
+            addHtmlExtensions();
         }
+    } catch {
+        // assuming not cloudflare
+        addHtmlExtensions();
     }
 });
