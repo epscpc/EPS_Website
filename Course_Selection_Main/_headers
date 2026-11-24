@@ -2,3 +2,8 @@
 /*
     # This header is more efficient than no-store
     Cache-Control: no-cache
+
+# Cloudflare Pages detection
+/cf-detect
+    Server-Like-CFPages: 1
+
