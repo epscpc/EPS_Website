@@ -40,11 +40,25 @@ window.addEventListener("load", function () {
         failureCallback(error);
       }
     },
-    eventClassNames: function(arg) {
+    eventClassNames: function (arg) {
       // Block order highlighting
       // (ON uses cal_mode to highlight "block order" days)
       if (arg.event.extendedProps.cal_mode) {
         return [ 'block-order' ]
+      }
+    },
+    eventDidMount: function (info) {
+      if (!info.event.extendedProps.cal_mode) {
+        const content = info.event.title;
+        info.el._tippy = tippy(info.el, {
+          content,
+          allowHTML: true
+        });
+      }
+    },
+    eventWillUnmount: function (info) {
+      if (info.el._tippy) {
+        info.el._tippy.destroy();
       }
     },
   });
