@@ -1,7 +1,5 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<!-- Style used stored in file itself-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +25,14 @@
         </div>
     </main>
 
+    <dialog id="event-info">
+        <p id="event-info-title"></p>
+        <button commandfor="event-info" command="close" type="button">Close</button>
+    </dialog>
+
     <!-- FullCalendar JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js" integrity="sha512-TPh2Oxlg1zp+kz3nFA0C5vVC6leG/6mm1z9+mA81MI5eaUVqasPLO8Cuk4gMF4gUfP5etR73rgU/8PNMsSesoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tippy.js/6.3.7/tippy-bundle.umd.min.js" integrity="sha512-gbruucq/Opx9jlHfqqZeAg2LNK3Y4BbpXHKDhRC88/tARL/izPOE4Zt2w6X9Sn1UeWaGbL38zW7nkL2jdn5JIw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/6.1.19/index.global.min.js" integrity="sha512-oVdWXnAvkKCjV7eICa4Hbmdrtg2z8hvsQ6lC1/GRQck7hexUrp7fCJZVU/unJviMXCJdpT1rzUpxVKVKP8IcCA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/resources/js/cal.js"></script>
     <script src="/resources/js/site_footer.js"></script>
